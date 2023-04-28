@@ -4,7 +4,7 @@
     outline: 0;
     box-sizing: border-box;
 }
-.container{
+.container{   
     background-color: #000000a9;
     position: fixed;
     width: 100vw;
@@ -14,36 +14,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    top: 0;
 }
 .loader {
     position: relative;
-    display: flex;
+    display: relative;
     align-items: center;
     justify-content: center;
     width: 100%;
     max-width: 6rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
-  }
-  .loader:before,
-  .loader:after {
+}
+.loader:before,
+.loader:after {
     content: "";
     position: absolute;
     border-radius: 50%;
     animation: pulsOut 1.8s ease-in-out infinite;
     filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.75));
-  }
-  .loader:before {
+}
+.loader:before {
     width: 100%;
     padding-bottom: 100%;
     box-shadow: inset 0 0 0 1rem #fff;
     animation-name: pulsIn;
-  }
-  .loader:after {
+}
+.loader:after {
     width: calc(100% - 2rem);
     padding-bottom: calc(100% - 2rem);
     box-shadow: 0 0 0 0 #fff;
-  }
+}
 
   @keyframes pulsIn {
     0% {
@@ -65,8 +66,7 @@
       box-shadow: 0 0 0 1rem #fff;
       opacity: 1;
     }
-  }
-      
+}      
 @media screen and (max-width:550px){     
     .spotify-embeds {        
         width: 100%;
@@ -122,9 +122,9 @@ body {
     text-align:center;
     font-size: 70px;
     width: 100%;   
-    font-weight: bolder;     
+    font-weight: bolder;
+    margin-top: 2em; 
 }
-
 .subtitulos{
     text-align: center;
     font-style: italic;
@@ -140,8 +140,7 @@ body {
     width: 100%;    
 }
 
-.JF{
-    
+.JF{    
     display: inline-block;
     text-align: center;
 }
@@ -173,8 +172,10 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem;
-    background-color: #ff00aa52;
-    margin: 0;    
+    background-color: #af0576ea;   
+    width: 100%;  
+    top: 0;       
+    position: fixed;
 }
 .abrirMenu, .message{
     margin-left: 0;
@@ -205,6 +206,12 @@ header{
     font-size: 30px;
     color: #ffffff;
 }
+.icon{
+   font-size: 30px;
+   color: #ffffff;
+   display: block;
+
+}
 @media screen and (max-width: 550px){
 .abrirMenu,
 .cerrarMenu{
@@ -226,7 +233,8 @@ header{
 .nav{
     opacity: 0;
     visibility: hidden;
-
+    
+    
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -239,8 +247,10 @@ header{
     padding: 2rem;
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
     transition-property:all;
-    transition-duration: 350ms;
-    transition-timing-function: linear;
+    transition-duration: 350ms;  
+    padding: 10px;
+    position: fixed;
+    
 }
 .nav.visible{    
     opacity: 1;
@@ -248,7 +258,7 @@ header{
 }
 .nav-list{
     flex-direction: column;
-    align-items: end;
+    align-items: end;    
 
 }
 .nav-list li a{

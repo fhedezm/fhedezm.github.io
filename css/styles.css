@@ -9,22 +9,22 @@
     position: fixed;
     width: 100vw;
     height: 100vh;
+    top: 0;
     z-index: 9999;
     transition: all 1.5s;
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 0;
 }
 .loader {
-    position: relative;
-    display: relative;
-    align-items: center;
-    justify-content: center;
+    position: sticky;/*relative*/
+    display: flex;
     width: 100%;
     max-width: 6rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
+    justify-content: center;
+    align-items: center;
 }
 .loader:before,
 .loader:after {
@@ -111,19 +111,21 @@ body {
     
 }
 .js .spotify-embed iframe {
-    opacity: 0;
-    
+    opacity: 0;    
 }
 .js .spotify-embed iframe.loaded {
     opacity: 1;    
 }
-
 .titulos{
     text-align:center;
     font-size: 70px;
     width: 100%;   
     font-weight: bolder;
     margin-top: 2em; 
+}
+.heart{    
+    font-size: 50px;
+    text-align: center;    
 }
 .subtitulos{
     text-align: center;
@@ -133,39 +135,42 @@ body {
     font-weight: bolder; 
     background-color: #ff00aa52;
 }
-
 .Seccion{
     text-align: center;
     display: inline-block;
     width: 100%;    
 }
-
 .JF{    
     display: inline-block;
-    text-align: center;
+    text-align: center; 
+    padding: 4px 4px 4px 4px;
+    border:  2px solid;
+    background-color: #ffffff; 
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
-
 .JF_V{
     display: inline-block;
     text-align: center;
+    padding: 4px 4px 4px 4px;
+    border:  2px solid;
+    background-color: #ffff; 
+    margin-top: 3px;
 }
-
 .contenido {
     font-style: italic;
     text-align: center;  
     font-size: 20px; 
+    margin-bottom: 15px;
+    background: #0000007c;
+    font-weight: bold;
+    color: #ffffff;
+    
 }
-
 .subseccion{
      text-align: center;
      display: inline-block;
      width: 100%;   
-}
-
-p{
-    font-style: italic;
-    text-align: center;  
-    font-size: 20px;
 }
 header{
     display: flex;
@@ -197,9 +202,6 @@ header{
 .cerrarMenu{
     display: none;
 }
-.logo2{
-    display: none;
-}
 .message{
     background: transparent;
     text-decoration: none;
@@ -210,7 +212,6 @@ header{
    font-size: 30px;
    color: #ffffff;
    display: block;
-
 }
 @media screen and (max-width: 550px){
 .abrirMenu,
@@ -232,9 +233,7 @@ header{
 }
 .nav{
     opacity: 0;
-    visibility: hidden;
-    
-    
+    visibility: hidden;        
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -249,8 +248,7 @@ header{
     transition-property:all;
     transition-duration: 350ms;  
     padding: 10px;
-    position: fixed;
-    
+    position: fixed; 
 }
 .nav.visible{    
     opacity: 1;
@@ -259,7 +257,6 @@ header{
 .nav-list{
     flex-direction: column;
     align-items: end;    
-
 }
 .nav-list li a{
     color: #ffffff;

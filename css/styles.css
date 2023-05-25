@@ -1,0 +1,348 @@
+*,*::before, *::after{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100%;
+    font-family: 'Roboto', sans-serif;
+    color:#ffffff;
+    width: 100%;
+    background: #ff00aa;
+}
+.container{   
+    background-color: #000000a9;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 9999;
+    transition: all 1.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loader {
+    position: sticky;/*relative*/
+    display: flex;
+    width: 100%;
+    max-width: 6rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+.loader:before,
+.loader:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    animation: pulsOut 1.8s ease-in-out infinite;
+    filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.75));
+}
+.loader:before {
+    width: 100%;
+    padding-bottom: 100%;
+    box-shadow: inset 0 0 0 1rem #fff;
+    animation-name: pulsIn;
+}
+.loader:after {
+    width: calc(100% - 2rem);
+    padding-bottom: calc(100% - 2rem);
+    box-shadow: 0 0 0 0 #fff;
+}
+@keyframes pulsIn {
+    0% {
+      box-shadow: inset 0 0 0 1rem #fff;
+      opacity: 1;
+    }
+    50%, 100% {
+      box-shadow: inset 0 0 0 0 #fff;
+      opacity: 0;
+    }
+}
+@keyframes pulsOut {
+    0%, 50% {
+      box-shadow: 0 0 0 0 #fff;
+      opacity: 0;
+    }
+    100% {
+      box-shadow: 0 0 0 1rem #fff;
+      opacity: 1;
+    }
+}
+.spotify-embeds {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: fixed;  
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+}
+.spotify-embed:not(:last-of-type) {
+    margin-bottom: 5px;    
+}
+.spotify-embed iframe {
+    display: block;
+    transition: opacity 0.125s;
+    
+}
+.js .spotify-embed iframe {
+    opacity: 0;    
+}
+.js .spotify-embed iframe.loaded {
+    opacity: 1;    
+}
+.heart{    
+    font-size: 50px;
+    text-align: center;    
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #ff00aa;   
+    width: 100%;  
+    top: 0;       
+    position: fixed;
+    z-index: 800;
+}
+.abrirMenu, .message{
+    margin-left: 0;
+    margin-right: 0;
+}
+.logo{
+    max-width: 80px;
+}
+.nav-list{
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+.nav-list li a{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0.7em;
+    margin: auto;
+    border: 1px solid #ffffff ;
+    border-radius: 60px;
+}
+.abrirMenu,
+.cerrarMenu{
+    display: none;
+}
+.message{
+    background: transparent;
+    text-decoration: none;
+    font-size: 30px;
+    color: #ffffff;
+       
+}
+.icon{
+   font-size: 30px;
+   color: #ffffff;
+   display: block;
+}
+h1{
+    font-family:'Times New Roman', Times, serif;
+    text-align:center;
+    font-size: 70px;
+    width: 100%;   
+    font-weight: bolder;
+    margin-bottom: 0.5em;  
+}
+.heart{        
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 0.5em;     
+}
+em{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 18px;
+    text-align: center;
+}
+.banner{
+    width: 100%;
+    height:950px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: center fixed url(/img/Backrground.png);
+}
+.subtitulo{
+    text-align: center;
+    background-color: #ff00aa52;
+    display: fixed;
+    position: sticky;
+    top: 87px;
+    z-index: 0;
+    font-weight: bold;
+}
+.banner2{    
+    width: 100%;
+    height:auto;
+    background: center fixed url(/img/Backrground2.png);
+}
+.banner3{
+    width: 100%;
+    height:auto;
+    background:  center fixed url(/img/Backrground3.png);
+}
+.banner4{
+    width: 100%;
+    height:auto;
+    background:  center fixed url(/img/Backrground4.png);
+}
+.banner5{
+    width: 100%;
+    height: auto;
+    background:center fixed url(/img/Backrground5.png) ;
+}
+.banner6{
+    width: 100%;
+    height: auto;
+    background: center fixed url(/img/Backrground6.png);
+}
+.banner7{
+    width: 100%;
+    height: auto;
+    background: center fixed url(/img/Backrground7.png);
+}
+.banner8{
+    width: 100%;
+    height: auto;
+    background: center fixed url(/img/Backrground8.png);
+}
+.images{    
+    display: inline-block;
+    text-align: center;  
+}
+.JF{    
+    display: inline-block;
+    text-align: center; 
+    padding: 4px 4px 4px 4px;
+    border:  3px solid;
+    background-color: #fff; 
+    margin-top: 15px;
+    margin-bottom: 15px;    
+}
+.content{
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    font-size: 38px;    
+}
+.banner_cont{
+    width: 100%;
+}
+p{
+    background: #0000003a;
+}
+.foot{
+    background: #ff00aa;
+    width: 100%;
+    height: 70px;
+}
+.Inicio:hover,
+.Drive:hover,
+.Metas:hover{
+    color: #ff00aa;
+    background-color:#ffffff;
+}
+.texto_metas{
+    height: auto;
+    display: flexbox;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.maquina-de-escribir{
+    font-family: monospace;
+    overflow: hidden;
+    font-size: 1.5em;
+    background: #0000003a ;
+}
+/*PHONES*/
+@media screen and (max-width: 550px){
+.abrirMenu,
+.cerrarMenu{
+    display: block;
+    border: 0;
+    font-size: 3rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+.logo2{
+    width: 75px;
+}
+.abrirMenu{
+    color: #ffffff;
+}
+.cerrarMenu{
+    color: #ffffff;
+}
+.nav{
+    opacity: 0;
+    visibility: hidden;        
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ff00aa;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    transition-property:all;
+    transition-duration: 350ms;  
+    padding: 10px;
+    position: fixed; 
+}
+.nav.visible{    
+    opacity: 1;
+    visibility: visible;
+}
+.nav-list{
+    flex-direction: column;
+    align-items: end;
+}
+.nav-list li a{
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 0.2em;
+    margin: auto;
+    border: 2px solid #ffffff ;
+    border-radius: 50px;
+}
+li{
+    padding: 5px 0;
+}
+.spotify-embeds {        
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: fixed;       
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    z-index: 999;
+}    
+.spotify-embed {
+    width: 95%;
+    margin-bottom: 5px;
+    z-index: 999;
+}  
+.spotify-embed iframe {
+    display: block;
+    width: 100%;
+    transition: opacity 0.125s;
+    z-index: 999;
+}   
+}
